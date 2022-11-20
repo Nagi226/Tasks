@@ -192,3 +192,142 @@ else return count + " Hold";
   
 cc(2); cc(3); cc(7); cc('K'); cc('A');
 
+
+//
+var testObj = {
+  "hat": "ballcap",
+  "shirt": "jersey",
+  "shoes": "cleats"
+};
+
+var hatValue = testObj.hat;
+var shirtValue = testObj.shirt;
+
+
+//Accessing Object Properties with Dot Notation Доступ к свойствам объекта с помощью записи через точку
+
+var testObj = {
+  "hat": "ballcap",
+  "shirt": "jersey",
+  "shoes": "cleats"
+};
+
+var hatValue = testObj.hat;
+var shirtValue = testObj.shirt;
+
+//Accessing Object Properties with Bracket Notation Доступ к свойствам объекта с помощью нотации скобок
+// Setup
+var testObj = {
+  "an entree": "hamburger",
+  "my side": "veggies",
+  "the drink": "water"
+};
+
+// Only change code below this line
+
+var entreeValue = testObj["an entree"];   // Change this line
+var drinkValue = testObj["the drink"];    // Change this line
+
+
+
+//Accessing Object Properties with Variables Обновление свойств объекта
+// Setup
+var testObj = {
+  12: "Namath",
+  16: "Montana",
+  19: "Unitas"
+};
+
+// Only change code below this line;
+
+var playerNumber = 16;       // Change this Line
+var player = testObj[playerNumber];   // Change this Line
+
+
+//Updating Object Properties
+
+// Example
+var ourDog = {
+  "name": "Camper",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["everything!"]
+};
+
+ourDog.name = "Happy Camper";
+
+// Setup
+var myDog = {
+  "name": "Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["Free Code Camp Campers"]
+};
+
+// Only change code below this line.
+
+myDog.name = "Happy Coder"; // Dot notation
+myDog["name"] = "Happy Coder"; // Bracket notation
+
+
+//Add New Properties to a JavaScript Object
+
+// Example
+var ourDog = {
+  "name": "Camper",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["everything!"]
+};
+
+ourDog.bark = "bow-wow";
+
+// Setup
+var myDog = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["Free Code Camp Campers"]
+};
+
+// Only change code below this line.
+
+myDog.bark = "woof"; // Dot notation
+myDog["bark"] = "woof"; // Bracket notation
+
+
+//Delete Properties from a JavaScript Object
+var myDog = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"],
+  "bark": "woof"
+};
+delete myDog.tails;
+
+
+//Using Objects for Lookups
+
+// Setup
+function phoneticLookup(val) {
+  var result = "";
+
+  var lookup = {
+    "alpha": "Adams",
+    "bravo": "Boston",
+    "charlie": "Chicago",
+    "delta": "Denver",
+    "echo": "Easy",
+    "foxtrot": "Frank"
+  };
+  // Only change code below this line
+
+  result = lookup[val];
+
+  // Only change code above this line
+  return result;
+}
+
+// Change this value to test
+phoneticLookup("charlie");
