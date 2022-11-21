@@ -331,3 +331,96 @@ function phoneticLookup(val) {
 
 // Change this value to test
 phoneticLookup("charlie");
+
+
+
+// Generate Random Fractions with JavaScript
+
+
+function randomFraction() {
+
+  // Only change code below this line.
+
+  return Math.random();
+
+  // Only change code above this line.
+}
+
+
+//Generate Random Whole Numbers with JavaScript 
+
+function randomWholeNum() {
+  return Math.floor(Math.random() * 10);
+}
+
+
+//Generate Random Whole Numbers within a Range
+
+// Example
+function ourFunction(ourMin, ourMax) {
+
+  return Math.floor(Math.random() * (ourMax - ourMin + 1)) + ourMin;
+}
+
+ourFunction(1, 9);
+
+// Only change code below this line.
+
+function randomRange(myMin, myMax) {
+
+  return Math.floor(Math.random() * (myMax - myMin + 1) + myMin);
+
+}
+
+// Change these values to test your function
+var myRandom = randomRange(5, 15);
+
+ 
+// Use the parseInt Function
+
+function convertToInteger(str) {
+  return parseInt(str, 2);
+}
+
+
+
+// Use the Conditional (Ternary) Operator
+
+function checkEqual(a, b) {
+  return a === b ? "Equal" : "Not Equal";
+}
+
+// Use Multiple Conditional (Ternary) Operators
+function checkSign(num) {
+  return (num > 0) ? 'positive' : (num < 0) ? 'negative' : 'zero';
+}
+
+//Use Recursion to Create a Countdown
+function countdown(n){
+  return n < 1 ? [] : [n].concat(countdown(n - 1));
+}
+
+//Use Recursion to Create a Range of Numbers
+function rangeOfNumbers(startNum, endNum) {
+  if (endNum - startNum === 0) {
+    return [startNum];
+  } else {
+    const numbers = rangeOfNumbers(startNum, endNum - 1);
+    numbers.push(endNum);
+    return numbers;
+  }
+}
+
+// Compare Scopes of the var and let Keywords
+
+function checkScope() {
+  'use strict';
+  let i = 'function scope';
+  if (true) {
+    let i = 'block scope';
+    console.log('Block scope i is: ', i);
+  }
+ 
+  console.log('Function scope i is: ', i);
+  return i;
+}

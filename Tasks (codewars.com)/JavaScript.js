@@ -173,3 +173,54 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
     var str = a2.join(' ');
     return a1.filter(s => str.indexOf(s) !== -1).sort();
   }
+
+
+  //  Задача на проверку уникальных букв в двух строках
+
+  function solve(a,b){
+    return (a+b).split("").filter(c => !a.includes(c) || !b.includes(c)).join("");
+   }
+
+
+   //Задача на сортировку массива перывй самый большой элемент, первый самый маленький, второй самый болшой и т. д.
+   function solve(arr){
+    var minMax = [];
+    arr.sort((a,b)=>a-b);
+    for(var i = 0, j = arr.length-1; i <= j; i++,j--){
+      if(i != j) minMax.push(arr[j]), minMax.push(arr[i]);
+      else minMax.push(arr[i]);
+    }
+    return minMax;
+  }
+
+  //Найти минимальное количество камней, которые нужно убрать со стола, чтобы камни в каждой паре соседних камней имели разные цвета.
+  function solve(stones) {
+    let count = 0
+    for (let i = 1; i <= stones.length; i++) {
+      if (stones[i] === stones[i-1]) { count++ }
+    }
+    return count
+  }
+
+  
+  //Найти в строке гласные символы aeiou
+  function getCount(str) {
+    return (str.match(/[aeiou]/ig)||[]).length;
+  }
+
+  //Найти номер буквы в алфавите и переобразовать строку в эти номера
+  function alphabetPosition(text) {
+    return text
+    .toUpperCase()
+    .match(/[a-z]/gi)
+    .map( (c) => c.charCodeAt() - 64)
+    .join(' ');
+  }
+
+
+  //Отсортировать только нечетные цифры из массива
+
+  function sortArray(array) {
+    const odd = array.filter((x) => x % 2).sort((a,b) => a - b);
+    return array.map((x) => x % 2 ? odd.shift() : x);
+  }
