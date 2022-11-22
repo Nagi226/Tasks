@@ -424,3 +424,55 @@ function checkScope() {
   console.log('Function scope i is: ', i);
   return i;
 }
+
+
+
+// Prevent Object Mutation
+function freezeObj() {
+  'use strict';
+  const MATH_CONSTANTS = {
+    PI: 3.14
+  };
+  // change code below this line
+  Object.freeze(MATH_CONSTANTS);
+
+  // change code above this line
+  try {
+    MATH_CONSTANTS.PI = 99;
+  } catch(ex) {
+    console.log(ex);
+  }
+  return MATH_CONSTANTS.PI;
+}
+const PI = freezeObj();
+
+
+// Use Destructuring Assignment to Assign Variables from Arrays
+
+
+
+let a = 8, b = 6;
+// change code below this line
+ [a,b] = [b,a];
+// change code above this line
+console.log(a); // should be 6
+console.log(b); // should be 8
+    
+
+// Use Destructuring Assignment to Pass an Object as a Function's Parameters
+
+
+const stats = {
+  max: 56.78,
+  standard_deviation: 4.34,
+  median: 34.54,
+  mode: 23.87,
+  min: -0.75,
+  average: 35.85
+};
+// change code below this line
+const half = ({max, min}) => ((max + min) / 2.0); // use function argument destructurung
+// change code above this line
+console.log(stats); // should be object
+console.log(half(stats)); // should be 28.015
+
