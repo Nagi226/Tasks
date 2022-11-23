@@ -476,3 +476,33 @@ const half = ({max, min}) => ((max + min) / 2.0); // use function argument destr
 console.log(stats); // should be object
 console.log(half(stats)); // should be 28.015
 
+
+//Use * to Import Everything from a File
+import * as stringFunctions from "./string_functions.js";
+
+// add code above this line
+stringFunctions.uppercaseString("hello");
+stringFunctions.lowercaseString("WORLD!");
+
+//Create an Export Fallback with export default
+export default function subtract(x, y) {
+  return x - y;
+}
+
+// Complete a Promise with resolve and reject
+
+const makeServerRequest = new Promise((resolve, reject) => {
+  // responseFromServer is set to true to represent a successful response from a server
+  let responseFromServer = true;
+
+  if(responseFromServer) {
+    resolve("We got the data");
+  } else {  
+    reject("Data not received");
+  }
+});
+
+makeServerRequest.then(result => {
+  console.log(result);
+});
+
