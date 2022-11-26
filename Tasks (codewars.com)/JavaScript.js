@@ -224,3 +224,17 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
     const odd = array.filter((x) => x % 2).sort((a,b) => a - b);
     return array.map((x) => x % 2 ? odd.shift() : x);
   }
+
+
+// Anagram Detection
+var isAnagram = function(test, original) {
+  var t = test.toLowerCase().split('').sort().join('');
+  var o = original.toLowerCase().split('').sort().join('');
+  return (t==o)?true:false;
+};
+
+
+// Leap Years
+function isLeapYear(year) {
+  return (year % 100 !== 0 && year % 4 === 0) || year % 400 === 0;
+}
