@@ -238,3 +238,10 @@ var isAnagram = function(test, original) {
 function isLeapYear(year) {
   return (year % 100 !== 0 && year % 4 === 0) || year % 400 === 0;
 }
+
+
+// avascript filter - 1
+
+function searchNames( logins ){
+  return logins.filter(a=>a[0].endsWith('_'));
+}
